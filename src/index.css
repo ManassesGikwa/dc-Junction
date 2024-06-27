@@ -1,0 +1,281 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #cad3dd; /* Dark Navy Blue */
+  color: #333; /* Adjust text color for better contrast */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Make the app container take full height */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #003366; /* Darker Blue for Navbar */
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #004080;
+  border-radius: 5px;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #003366;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 200px;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #004080;
+  border-radius: 0;
+}
+
+/* Arrow for dropdown */
+nav ul li a::after {
+  content: ' ▼';
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+nav ul li ul li a::after {
+  content: '';
+}
+
+/* Content styles */
+.main-content {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+
+.main-content h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5em;
+  color: #003366; /* Text color for headings */
+}
+
+/* Footer styles */
+footer {
+  background-color: #003366;
+  padding: 10px; /* Reduce padding to decrease height */
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+}
+
+footer .footer-content div {
+  flex: 1;
+  margin: 5px; /* Reduce margin to decrease height */
+  min-width: 200px;
+}
+
+footer h2, footer h3 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0; /* Reduce margin to decrease height */
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  width: 100%;
+  margin: auto;
+}
+
+.each-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Adjust height based on your design */
+  background: #fff; /* Background color for slides */
+}
+
+.each-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire area */
+}
+
+/* Styles for Live component */
+.live-video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.live-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*ABOUT US */
+/* index.css */
+.about-us-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-us-container h2 {
+  color: #003366; /* Dark blue */
+}
+
+.about-us-container p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #003366; /* Dark blue */
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #004080; /* Darker blue on hover */
+}
+
+.social-links .fa-icon {
+  margin-right: 5px;
+}
+
+/*Giving*/
+/* index.css */
+.giving-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.giving-container h2 {
+  color: #003366; /* Dark blue */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Gap between cards */
+}
+
+.card {
+  background-color: #f0f0f0; /* Light gray background for cards */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card h3 {
+  color: #003366; /* Dark blue */
+  margin-bottom: 10px;
+}
+
+.card p {
+  line-height: 1.6;
+}
+/* index.css */
+
+.card {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up by 5% on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
+}
