@@ -1,3 +1,4 @@
+/* General styles for all devices */
 html, body {
   margin: 0;
   padding: 0;
@@ -156,26 +157,6 @@ footer ul li a:hover {
   text-decoration: underline;
 }
 
-/* Slideshow styles */
-.slideshow-container {
-  width: 100%;
-  margin: auto;
-}
-
-.each-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px; /* Adjust height based on your design */
-  background: #fff; /* Background color for slides */
-}
-
-.each-slide img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire area */
-}
-
 /* Styles for Live component */
 .live-video-container {
   position: relative;
@@ -193,45 +174,42 @@ footer ul li a:hover {
   height: 100%;
 }
 
-/*ABOUT US */
-/* index.css */
+/* About Us */
 .about-us-container {
-  max-width: 800px;
-  margin: auto;
   padding: 20px;
   text-align: center;
 }
 
-.about-us-container h2 {
-  color: #003366; /* Dark blue */
-}
-
-.about-us-container p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
 .social-links {
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
 }
 
-.social-links a {
-  color: #003366; /* Dark blue */
-  margin: 0 10px;
-  transition: color 0.3s ease;
+.social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.social-links a:hover {
-  color: #004080; /* Darker blue on hover */
+.social-card:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.social-links .fa-icon {
-  margin-right: 5px;
+.social-card span {
+  margin-left: 10px;
+  font-size: 1.2em;
 }
 
-/*Giving*/
-/* index.css */
+/* Giving */
 .giving-container {
   max-width: 800px;
   margin: auto;
@@ -265,23 +243,8 @@ footer ul li a:hover {
 .card p {
   line-height: 1.6;
 }
-/* index.css */
 
-.card {
-  background-color: #f0f0f0; /* Light gray background */
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-  transform: scale(1.05); /* Scale up by 5% on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
-}
-
-/*Contact Us*/
-/* Contacts Page */
+/* Contact Us */
 .contacts-container {
   max-width: 800px;
   margin: auto;
@@ -336,34 +299,14 @@ footer ul li a:hover {
   transform: scale(1.05); /* Protruding effect on hover */
 }
 
-/*OUr Services*/
-/* General styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #cad3dd;
-  color: #333;
-}
-
-/* Content styles */
-.main-content {
-  flex: 1;
+/* Our Services */
+.our-services-container {
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
+  text-align: center;
 }
 
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5em;
-  color: #003366;
-}
-
-/* Card grid container styles */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -397,10 +340,46 @@ h2 {
   margin-right: 5px;
 }
 
-/* Our services container */
-.our-services-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+/* Responsive Media Queries */
+
+/* Adjust grid layout for smaller screens */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Adjust padding and font sizes for smaller screens */
+@media (max-width: 480px) {
+  .main-content, .about-us-container, .giving-container, .contacts-container, .our-services-container {
+    padding: 10px;
+  }
+
+  nav ul li a {
+    padding: 5px 10px;
+  }
+
+  footer {
+    padding: 5px;
+  }
+
+  .card h3, .card p {
+    font-size: 0.9em;
+  }
+
+  .social-card span {
+    font-size: 1em;
+  }
 }

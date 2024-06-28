@@ -11,7 +11,7 @@ const Contacts = () => {
         <div className="card">
           <h3><FontAwesomeIcon icon={faPhone} /> Phone</h3>
           <hr />
-          <p><strong>0726885106</strong></p>
+          <p><strong>0726885106 / 0724678868</strong></p>
         </div>
         <div className="card">
           <h3><FontAwesomeIcon icon={faEnvelope} /> Email</h3>

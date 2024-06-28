@@ -45,7 +45,7 @@ const Giving = () => {
           <h3>Giving in Kind</h3>
           <hr />
           <p>
-            We are called to minister unto God and the community. Therefore you are free to give various material items, skills, talents and expertise for the sake of God's Kingdom advancing greatly!
+            We are called to minister unto God and the community. Therefore you are free to give various material and food items, skills, talents and expertise for the sake of God's Kingdom advancing greatly!
           </p>
         </div>
       </div>
