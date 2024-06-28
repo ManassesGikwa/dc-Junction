@@ -1,32 +1,44 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faMapMarkerAlt, faDirections } from '@fortawesome/free-solid-svg-icons';
+import '../index.css'; // Ensure your index.css has necessary styles
 
 const Contacts = () => {
   return (
-    <div>
-      <h2>Contacts</h2>
-      <form>
-        <label>Your Name:</label>
-        <input type="text" name="name" />
-        <label>Your Email:</label>
-        <input type="email" name="email" />
-        <label>Subject:</label>
-        <input type="text" name="subject" />
-        <label>Your Message:</label>
-        <textarea name="message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <h3>Join Our Mailing List</h3>
-      <form>
-        <label>First Name:</label>
-        <input type="text" name="firstName" />
-        <label>Last Name:</label>
-        <input type="text" name="lastName" />
-        <label>Phone Number:</label>
-        <input type="text" name="phone" />
-        <label>Email:</label>
-        <input type="email" name="email" />
-        <button type="submit">Join</button>
-      </form>
+    <div className="contacts-container">
+      <h2>Contact Us</h2>
+      <div className="grid-container">
+        <div className="card">
+          <h3><FontAwesomeIcon icon={faPhone} /> Phone</h3>
+          <hr />
+          <p><strong>0726885106</strong></p>
+        </div>
+        <div className="card">
+          <h3><FontAwesomeIcon icon={faEnvelope} /> Email</h3>
+          <hr />
+          <p><strong>junctiondc@gmail.com</strong></p>
+        </div>
+        <div className="card">
+          <h3><FontAwesomeIcon icon={faDirections} /> Directions</h3>
+          <hr />
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} />{' '}
+            <a href="https://maps.app.goo.gl/PHce1FJVBozihz2c6" target="_blank" rel="noopener noreferrer">
+              <strong>DC JUNCTION</strong>
+            </a>
+          </p>
+        </div>
+        <div className="card">
+          <h3><FontAwesomeIcon icon={faDirections} />  Directions</h3>
+          <hr />
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} />{' '}
+            <a href="https://maps.app.goo.gl/EvwepwwtHRQgNvCc7" target="_blank" rel="noopener noreferrer">
+              <strong>JVCC</strong>
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

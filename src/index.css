@@ -279,3 +279,128 @@ footer ul li a:hover {
   transform: scale(1.05); /* Scale up by 5% on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
 }
+
+/*Contact Us*/
+/* Contacts Page */
+.contacts-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contacts-container h2 {
+  color: #003366; /* Dark blue */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #003366; /* Dark blue */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #003366; /* Dark blue */
+}
+
+.card a {
+  color: #003366; /* Dark blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #004080; /* Darker blue on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Protruding effect on hover */
+}
+
+/*OUr Services*/
+/* General styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #cad3dd;
+  color: #333;
+}
+
+/* Content styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5em;
+  color: #003366;
+}
+
+/* Card grid container styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.fa-icon {
+  margin-right: 5px;
+}
+
+/* Our services container */
+.our-services-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
