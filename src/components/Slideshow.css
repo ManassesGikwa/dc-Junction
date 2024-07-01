@@ -81,3 +81,91 @@ body, html {
 .get-more-sermons a .fa-youtube {
   margin-right: 10px;
 }
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .each-slide img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .each-slide img {
+    height: 400px;
+  }
+
+  .thumbnail {
+    flex: 1 1 20%;
+    max-width: 150px;
+  }
+
+  .thumbnail img {
+    height: 80px;
+  }
+
+  .get-more-sermons a {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .each-slide img {
+    height: 300px;
+  }
+
+  .thumbnail {
+    flex: 1 1 25%;
+    max-width: 120px;
+  }
+
+  .thumbnail img {
+    height: 70px;
+  }
+
+  .get-more-sermons a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .each-slide img {
+    height: 200px;
+  }
+
+  .thumbnail {
+    flex: 1 1 33%;
+    max-width: 100px;
+  }
+
+  .thumbnail img {
+    height: 60px;
+  }
+
+  .get-more-sermons a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .each-slide img {
+    height: 150px;
+  }
+
+  .thumbnail {
+    flex: 1 1 50%;
+    max-width: 80px;
+  }
+
+  .thumbnail img {
+    height: 50px;
+  }
+
+  .get-more-sermons a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

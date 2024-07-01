@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../index.css'; // Import your index.css file
 
-const API_KEY = 'AIzaSyC69PefpAJi2d6EjmWV5yAL6QPzWNt9FzE'; // Replace with your actual YouTube API key
-const CHANNEL_ID = 'UCBxvaAVEhDrBRj4QgG4Ezvw'; // Replace with your YouTube channel ID
+const API_KEY = process.env.REACT_APP_API_KEY;
+const CHANNEL_ID = process.env.REACT_APP_CHANNEL_ID;
 
 const Live = () => {
   const [isLive, setIsLive] = useState(false);
